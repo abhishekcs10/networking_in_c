@@ -1,0 +1,51 @@
+Black Box Testing
+=====================
+
+In the given assignment I have designed client server program such that user gives a string ending with ; and a keyword to be searched. The server processes the string searching the number of occurrences of keyword (as a substring) in the string (which can be overlapping).
+Server port address is fixed to 15000.
+
+Case 1
+=======
+
+Input is given in the format such that first line has a string containing letters (a-z),(A-Z),' ' followed by semicolon. In the next line keyword is provided which only contains english alphabets without spaces.
+
+In this case the input is in expected format and the required number of occurences is reported from the server to client as output.
+
+Server does not halt after the input is processed.
+
+Case 2
+=======
+
+When mutiple clients connect to server and provide the input in above given format (as in case1) then server processes the string of client one by one and serves mutiple client connection by forking the process.
+
+Case 3
+=======
+
+When the user enters a string without ; the client process is terminated without effecting the server.
+
+Case 4
+=======
+
+When client enters some string having invalid characters the client process is terminated only without any further processng. Also the length of string is checked not to exceed 30 charaters at max and keyword is limited to 5 characters max.
+
+Case 5
+=========
+
+A empty string or keyword results in termination of program at client side.
+
+Case 6
+=======
+
+Any spaces before or after the keyword and string are discarded before processing and not counted in the string to be passed.
+
+Case 7
+========
+
+If there is string as follows
+aaaaa;
+and keyword 'aa' is to be searched it will be counted to 4 i.e. overlapping is allowed.
+
+
+
+
+
